@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V.S Computer Coaching</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f3f5f7;
+}
+
+.topbar{
+background:#6b0000;
+color:white;
+padding:8px 30px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+font-size:14px;
+}
+
+.header{
+
+background:white;
+display:flex;
+align-items:center;
+padding:20px 30px;
+border-bottom:4px solid #7a0000;
+
+}
+
+.logo{
+
+width:90px;
+height:90px;
+border-radius:50%;
+background:#7a0000;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+color:white;
+font-weight:bold;
+margin-right:20px;
+
+}
+
+.title h1{
+
+color:#7a0000;
+font-size:36px;
+
+}
+
+.title p{
+
+color:#666;
+
+}
+
+nav{
+
+background:#7a0000;
+
+}
+
+nav ul{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+
+}
+
+nav ul li{
+
+position:relative;
+
+}
+
+nav ul li a{
+
+display:block;
+padding:16px 22px;
+text-decoration:none;
+color:white;
+font-weight:600;
+
+}
+
+nav ul li:hover{
+
+background:#530000;
+
+}
+
+.hero{
+
+height:430px;
+position:relative;
+overflow:hidden;
+
+}
+
+.slide{
+
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+display:none;
+
+}
+
+.slide.active{
+
+display:block;
+
+animation:fade 1s;
+
+}
+
+.slide::before{
+
+content:'';
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
+
+}
+
+.content{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+z-index:10;
+
+}
+
+.content h2{
+
+font-size:48px;
+margin-bottom:15px;
+
+}
+
+.content p{
+
+font-size:20px;
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:#ff9800;
+color:white;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+
+}
+
+.notice{
+
+background:white;
+width:95%;
+margin:20px auto;
+padding:18px;
+border-left:6px solid maroon;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.notice h2{
+
+color:#7a0000;
+margin-bottom:10px;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+width:95%;
+margin:20px auto;
+
+}
+
+.card{
+
+background:white;
+padding:25px;
+text-align:center;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+color:#7a0000;
+margin-bottom:12px;
+
+}
+
+.main{
+
+display:grid;
+grid-template-columns:1fr 2fr 1fr;
+gap:20px;
+width:95%;
+margin:auto;
+
+}
+
+.left,.center,.right{
+
+margin-bottom:20px;
+
+}
+
+.box{
+
+background:white;
+padding:18px;
+margin-bottom:18px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.menu-btn{
+
+background:#e98c00;
+padding:15px;
+margin-bottom:10px;
+text-align:center;
+color:white;
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
+
+}
+
+.quick{
+
+background:#1976d2;
+padding:15px;
+margin-bottom:10px;
+text-align:center;
+color:white;
+font-weight:bold;
+border-radius:5px;
+
+}
+
+@keyframes fade{
+
+from{opacity:0;}
+to{opacity:1;}
+
+}
+
+@media(max-width:900px){
+
+.main{
+
+grid-template-columns:1fr;
+
+}
+
+.header{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.content h2{
+
+font-size:30px;
+
+}
+
+.hero{
+
+height:260px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+
+<div>
+📍 Pan Kheda | V.S Computer Coaching
+</div>
+
+<div>
+
+Admission Open 2026-27
+
+</div>
+
+</div>
+
+<header class="header">
+
+<div class="logo">
+
+VS
+
+</div>
+
+<div class="title">
+
+<h1>V.S Computer Coaching</h1>
+
+<p>
+
+ADCA | DCA | O Level | CCC | Tally | Python | Web Designing
+
+</p>
+
+</div>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Admission</a></li>
+<li><a href="#">Courses</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Notices</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="slide active"
+style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');">
+
+<div class="content">
+
+<h2>Welcome To V.S Computer Coaching</h2>
+
+<p>
+
+Computer Education & Skill Development Institute
+
+</p>
+
+<a href="#" class="btn">
+
+Apply Online
+
+</a>
+
+</div>
+
+</div>
+
+<div class="slide"
+style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');">
+
+<div class="content">
+
+<h2>Learn Computer Skills</h2>
+
+<p>
+
+Build Your Career With Professional Courses
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="notice">
+
+<h2>📢 Latest Notice</h2>
+
+<marquee>
+
+Admissions Open 2026 | O Level New Batch |
+Free Demo Classes | Python | Tally |
+Web Designing | CCC
+
+</marquee>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>ADCA</h3>
+
+<p>Advanced Diploma In Computer Applications</p>
+
+</div>
+
+<div class="card">
+
+<h3>DCA</h3>
+
+<p>Diploma In Computer Applications</p>
+
+</div>
+
+<div class="card">
+
+<h3>O Level</h3>
+
+<p>NIELIT Certified Course</p>
+
+</div>
+
+<div class="card">
+
+<h3>Tally</h3>
+
+<p>Accounting & GST Training</p>
+
+</div>
+
+</div>
+
+<div class="main">
+
+	<!-- LEFT SIDEBAR -->
+<div class="left">
+
+<div class="box">
+<h2 style="color:#7a0000;">Student Corner</h2>
+
+<div class="menu-btn">🎓 Online Admission</div>
+<div class="menu-btn">📝 Student Registration</div>
+<div class="menu-btn">🔐 Student Login</div>
+<div class="menu-btn">💰 Online Fees</div>
+<div class="menu-btn">📥 Download Notes</div>
+<div class="menu-btn">📝 MCQ Practice</div>
+
+</div>
+
+<div class="box">
+
+<h2 style="color:#7a0000;">Courses</h2>
+
+<ul style="line-height:34px;padding-left:20px;">
+
+<li>ADCA</li>
+<li>DCA</li>
+<li>O Level</li>
+<li>CCC</li>
+<li>Tally Prime</li>
+<li>Python Programming</li>
+<li>Web Designing</li>
+
+</ul>
+
+</div>
+
+<div class="box">
+
+<h2 style="color:#7a0000;">Latest Updates</h2>
+
+<marquee direction="up" height="180">
+
+<p>Admission Open 2026</p>
+
+<p>New O Level Batch</p>
+
+<p>Python Classes Started</p>
+
+<p>Free Demo Available</p>
+
+<p>Typing Practice Daily</p>
+
+</marquee>
+
+</div>
+
+</div>
+
+<!-- CENTER -->
+
+<div class="center">
+
+<div class="box">
+
+<h2 style="color:#7a0000;">
+
+Welcome To V.S Computer Coaching
+
+</h2>
+
+<br>
+
+<p style="line-height:30px;">
+
+V.S Computer Coaching एक आधुनिक Computer Training Institute है जहाँ
+ADCA, DCA, O Level, CCC, Tally, Python, Web Designing तथा अन्य
+Professional Courses कराए जाते हैं।
+
+</p>
+
+<br>
+
+<p style="line-height:30px;">
+
+हमारा उद्देश्य विद्यार्थियों को Practical Knowledge,
+Placement Support तथा Industry Ready Skills प्रदान करना है।
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h2 style="color:#7a0000;">
+
+Director's Message
+
+</h2>
+
+<br>
+
+<p style="line-height:30px;">
+
+प्रिय विद्यार्थियों,
+
+हमारा प्रयास है कि प्रत्येक छात्र को गुणवत्तापूर्ण
+Computer Education मिले तथा वह अपने भविष्य में
+सफलता प्राप्त करे।
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h2 style="color:#7a0000;">
+
+Latest Notices
+
+</h2>
+
+<br>
+
+<table width="100%" border="0">
+
+<tr>
+
+<td>📢 Admission Open</td>
+
+<td>01 July 2026</td>
+
+</tr>
+
+<tr>
+
+<td>📢 O Level Registration</td>
+
+<td>05 July 2026</td>
+
+</tr>
+
+<tr>
+
+<td>📢 CCC New Batch</td>
+
+<td>10 July 2026</td>
+
+</tr>
+
+<tr>
+
+<td>📢 Python Workshop</td>
+
+<td>20 July 2026</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDEBAR -->
+
+<div class="right">
+
+<div class="quick">
+
+📚 Download Notes
+
+</div>
+
+<div class="quick">
+
+💻 Online Quiz
+
+</div>
+
+<div class="quick">
+
+📖 E-Library
+
+</div>
+
+<div class="quick">
+
+🎯 Placement Cell
+
+</div>
+
+<div class="quick">
+
+📷 Gallery
+
+</div>
+
+<div class="quick">
+
+📞 Contact Us
+
+</div>
+
+<div class="box">
+
+<h2 style="color:#7a0000;">
+
+Institute Timing
+
+</h2>
+
+<br>
+
+<p>Monday - Saturday</p>
+
+<p>09:00 AM - 06:00 PM</p>
+
+<br>
+
+<h3 style="color:#7a0000;">
+
+Contact
+
+</h3>
+
+<p>📞 +91-9876543210</p>
+
+<p>✉ info@vscoaching.in</p>
+
+</div>
+
+</div>
+
+</div>
+<!-- main close नहीं करना, Part-3 में होगा -->
+
+<!-- IMAGE GALLERY -->
+<section style="width:95%;margin:30px auto;">
+
+<div class="box">
+
+<h2 style="color:#7a0000;text-align:center;">
+Campus Gallery
+</h2>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+margin-top:20px;">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+style="width:100%;height:220px;object-fit:cover;border-radius:8px;">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STUDENT FEEDBACK -->
+
+<section style="width:95%;margin:auto;">
+
+<div class="box">
+
+<h2 style="color:#7a0000;">
+Student Feedback
+</h2>
+
+<br>
+
+<p>
+⭐⭐⭐⭐⭐
+"Excellent Computer Coaching Institute.
+Teachers are very supportive."
+</p>
+
+<hr style="margin:20px 0;">
+
+<p>
+⭐⭐⭐⭐⭐
+"Best O Level and ADCA Classes with Practical Training."
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section style="width:95%;margin:30px auto;">
+
+<div class="box">
+
+<h2 style="color:#7a0000;">
+Contact Us
+</h2>
+
+<br>
+
+<p><b>Address:</b> Pan Kheda, Uttar Pradesh</p>
+
+<p><b>Phone:</b> +91-9876543210</p>
+
+<p><b>Email:</b> info@vscoaching.in</p>
+
+</div>
+
+</section>
+
+<!-- GOOGLE MAP -->
+
+<section style="width:95%;margin:auto;">
+
+<div class="box">
+
+<h2 style="color:#7a0000;">
+Location
+</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Lucknow&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:8px;"
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer style="
+background:#6b0000;
+color:white;
+margin-top:40px;
+padding:40px 20px;">
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;">
+
+<div>
+
+<h2>V.S Computer Coaching</h2>
+
+<br>
+
+<p>
+Quality Computer Education,
+Practical Training,
+Career Guidance.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul style="line-height:32px;list-style:none;">
+
+<li>Home</li>
+<li>Courses</li>
+<li>Admission</li>
+<li>Gallery</li>
+<li>Contact</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Courses</h3>
+
+<ul style="line-height:32px;list-style:none;">
+
+<li>ADCA</li>
+<li>DCA</li>
+<li>O Level</li>
+<li>CCC</li>
+<li>Tally Prime</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<hr style="margin:30px 0;">
+
+<p style="text-align:center;">
+
+© 2026 V.S Computer Coaching.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script>
+
+/* SIMPLE AUTO SLIDER */
+
+let slides =
+document.querySelectorAll(".slide");
+
+let current = 0;
+
+setInterval(function(){
+
+slides[current].classList.remove("active");
+
+current++;
+
+if(current >= slides.length){
+
+current = 0;
+
+}
+
+slides[current].classList.add("active");
+
+},4000);
+
+</script>
+
+</body>
+</html>
