@@ -1,2 +1,2 @@
-# vs-coaching
-Official Website of V.S Computer Coaching
+# vps-coaching
+Official Website of VpS Computer Coaching
