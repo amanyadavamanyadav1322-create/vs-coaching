@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amanyadavamanyadav1322-create.github.io/vps-computer-institute/sitemap.xml
